@@ -1,0 +1,73 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.rotate {
+  transform: rotate(-90deg);
+}
+html {
+  font-size: 50.5%;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+.fixed {
+  position: fixed;
+}
+.flex {
+  display: flex;
+}
+.blue{
+  color: rgb(18, 175, 175) !important;
+}
+.green{
+  color: rgb(70, 180, 26) !important;
+}
+.purple{
+  color: rgb(180, 20, 180) !important;
+}
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+input {
+  cursor: text;
+  outline: none;
+  border: none;
+
+  background-color: #eee;
+}
+input:focus {
+  box-shadow: 0.1px 0.1px 1px 2px rgb(235, 82, 110);
+  background-color: white;
+}
+input:hover {
+}
+.bl {
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+.noul {
+  text-decoration: none;
+}
+
+.abs {
+  position: absolute;
+}
+.rel {
+  position: relative;
+}
+
+.ibl{
+    display: inline-block;
+}

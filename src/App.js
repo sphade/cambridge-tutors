@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./css/App.css";
+import "./css/props.css";
+import Discover from "./screen/Discover";
+import Categories from "./screen/Categories";
+import Sidebar from "./screen/Sidebar";
+import "./fontforme/css/all.min.css";
+import Home from "./screen/Home";
+// import RightBar from "./screen/RightBar";
+// import Oauth from "./screen/Oauth";
+import { Route, NavLink, HashRouter } from "react-router-dom";
+import Course from "./screen/Course";
+import MyCourses from "./screen/MyCourses";
 
 function App() {
+  // <Oauth/> <Course />
+  <Discover />
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App flex">
+      <HashRouter>
+        <Sidebar />
+        <div className="app-content">
+          <Route exact path="/" component={Home} />
+         
+           <Route path="/course/:id" component={Course } />
+          <Route path="/Discover/" component={Discover} />
+          <Route path="/Categories/" component={Categories} />
+          <Route path="/Mycourses/" component={MyCourses } />
+          
+        </div>
+      
+      </HashRouter>
     </div>
   );
 }

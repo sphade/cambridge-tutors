@@ -1,0 +1,520 @@
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: hsl(51, 77%, 47%);
+  --bg-color: hsl(0, 0, 100%);
+  --secondary-color: rgb(245, 52, 84);
+  --border: 0;
+}
+body {
+}
+.App {
+  padding: 0 2rem 0 0;
+}
+.player {
+  width: 100%;
+  height: 55%;
+  background-color: #000;
+}
+.player video {
+  height: 100%;
+  width: 100%;
+}
+.player .ctrls {
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  background-color: rgb(63, 59, 59);
+  z-index: 9;
+  padding: 0 15px;
+}
+.player .ctrls .pp {
+  border: 0;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: var(--secondary-color);
+}
+.player .ctrls .timer {
+  flex: 1;
+  margin: 0 2rem;
+}
+.player .ctrls .slider {
+  flex: 3;
+}
+.player .ctrls .slider .prog {
+  width: 100%;
+  height: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+.player .ctrls .slider .bar {
+  background-color: var(--secondary-color);
+  width: 30%;
+  height: 100%;
+  border-radius: 10px;
+}
+.player .ctrls .slider .bar .knob {
+  width: 20px;
+  height: 20px;
+  border-radius: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+  box-shadow: 0.1px 0.2px 3px #000;
+  right: 0;
+  background-color: rgb(255, 255, 255);
+}
+.player .ctrls .vol {
+  border: 0;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin: 0 20px;
+}
+.player .ctrls .fs {
+  border: 0;
+  height: 30px;
+  width: 30px;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  background-color: transparent;
+  margin: 0 20px;
+}
+.sidebar {
+  width: 27rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.sidebar .logo {
+  width: 100%;
+  display: block;
+  padding: 3rem 2rem;
+  font-size: 1rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+.title {
+  font-weight: bolder;
+  color: var(--primary-color);
+  font-size: 1.7rem;
+  text-transform: uppercase;
+}
+.title span {
+}
+.sidebar .logo img {
+  height: 5rem;
+}
+.sidebar .nav {
+  padding: 1rem rem;
+  text-transform: capitalize;
+  background-color: var(--bg-color);
+  margin-left: 3rem;
+  border-radius: 1rem;
+  border: var(--border);
+}
+.sidebar .nav li {
+  line-height: 4rem;
+  font-weight: 100;
+}
+a.on {
+  border-left: 0.5rem solid var(--primary-color);
+  color: var(--primary-color);
+}
+.link {
+  padding: 0.5rem 2rem;
+  align-items: center;
+}
+.link div {
+  margin-right: 1rem;
+}
+.link h2 {
+  font-weight: 500;
+  word-break: keep-all;
+}
+.sidebar .updated-course {
+  display: flex;
+  background-color: var(--bg-color);
+  margin-top: 2rem;
+  border: var(--border);
+  margin-left: 3rem;
+  padding: 0.5rem 0;
+  border-radius: 1rem;
+}
+.sidebar .updated-course div {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-size: 3rem;
+  padding: 2rem;
+  border-radius: 10rem;
+  align-self: center;
+}
+.sidebar .updated-course .label {
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 0;
+  padding-left: 1rem;
+  color: #333;
+}
+.author {
+  font-size: 1rem;
+}
+.c333 {
+  color: #333;
+}
+.s13 {
+  font-size: 1.1rem;
+}
+.s15 {
+  font-size: 1.3rem;
+}
+.s20 {
+  font-size: 1.8rem;
+}
+.s25 {
+  font-size: 2.2rem;
+}
+.fontb {
+  font-weight: bold;
+}
+.c777 {
+  color: #777;
+}
+.flex {
+  display: flex;
+}
+.stats {
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  align-items: center;
+}
+.point div {
+  font-size: 2rem;
+  flex-basis: 5rem;
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+}
+.stats .point:nth-child(1)div {
+  color: #333;
+}
+.point {
+  align-items: center;
+  flex-flow: column;
+  padding: 1rem;
+  justify-content: center;
+  background-color: var(--bg-color);
+  border-radius: 1rem;
+  flex-grow: 0.5;
+  margin-left: 1rem;
+  border: var(--border);
+}
+.rel {
+  position: relative;
+}
+.section {
+}
+.section-b {
+  margin-top: 5rem;
+}
+.section-b .courses {
+}
+.section-b .courses a {
+  display: block;
+  width: 100%;
+}
+.section-b .courses .block {
+  width: 90%;
+  height: 20rem;
+  background-size: cover !important;
+  margin-right: 0.5rem;
+  border-radius: 2rem;
+  border: 0.1rem solid rgb(199, 199, 199);
+}
+.section-b .courses .block .dura {
+  z-index: 1;
+  top: 10rem;
+  margin-left: 2rem;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+  border-radius: 2rem;
+  box-shadow: 0.1rem 0.2rem 0.3rem 0.2rem rgba(0, 0, 0, 0.335);
+}
+.section-b .courses .block .title {
+  z-index: 1;
+  text-align: center;
+  margin-left: 2rem;
+  background-color: rgba(0, 0, 0, 0.658);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  bottom: 1rem;
+  left: 1rem;
+  right: 1rem;
+  box-shadow: 0.1rem 0.2rem 0.3rem 0.2rem rgba(0, 0, 0, 0.335);
+}
+.section-b .courses a {
+  color: white;
+}
+.section-b .courses .user {
+  padding: 2rem;
+}
+.aic {
+  align-items: center;
+}
+.section-b .courses .user .pic {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: solid 0.2rem;
+}
+.abs {
+  position: absolute;
+}
+.cfff {
+  color: #fff;
+}
+.section-b .courses .user .pic .bl {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 0.3rem;
+}
+.section-b .courses .user .name {
+}
+.section-b .courses .user .uname {
+}
+.section .tutors {
+}
+.section .tutors .tutor {
+  height: 6rem;
+  margin-right: 4rem;
+  width: 6rem;
+  border: 0.2rem solid #f53454;
+  border-radius: 7rem;
+  padding: rem;
+  overflow: hidden;
+  padding: 0.2rem;
+}
+.section .tutors .tutor img {
+  clip-path: circle();
+  width: 100%;
+  height: 100%;
+}
+.section .title {
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+.fontn {
+  font-weight: lighter;
+
+}
+.orange {
+  color: var(--primary-color);
+}
+.black {
+  color: black;
+}
+.set {
+  width: 100%;
+  object-fit: contain;
+  height: 100%;
+  margin-right: 1rem;
+}
+.app-content {
+  flex: 2;
+  padding: 2rem;
+}
+.right-bar {
+  flex: 1.2;
+  height: 100vh;
+  overflow-x: hidden;
+}
+.right-bar {
+  margin-top: 2rem;
+}
+.right-bar::-webkit-scrollbar {
+  width: 1rem;
+  background-color: white;
+}
+.right-bar::-webkit-scrollbar-thumb {
+  width: 1rem;
+  background-color: var(--secondary-color);
+}
+.home {
+  width: 100%;
+}
+.right-bar .search-box {
+  padding: rem;
+  margin: 1rem;
+  border-radius: 1rem;
+}
+.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  margin-top: -10rem;
+  background-color: white;
+}
+.right-bar .search-box .qry {
+  flex: 1;
+  padding: 1.2rem;
+  border-top-left-radius: 9px;
+  border-bottom-left-radius: 9px;
+}
+.right-bar .search-box .go {
+  padding: 1.2rem;
+  color: white;
+  background-color: var(--secondary-color);
+  border-top-right-radius: 9px;
+  border-bottom-right-radius: 9px;
+}
+.right-bar .search-box .go:hover {
+  background-color: hsl(350, 85%, 48%);
+}
+.right-bar .courses {
+  flex-direction: column;
+  height: 100vh;
+  margin-top: 20rem;
+}
+.right-bar .courses .cols {
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.right-bar .section-b .courses .course-a .block {
+  margin: 0 auto;
+  width: 80%;
+  height: 25rem;
+  margin-bottom: 3rem;
+}
+.right-bar .courses .cols a .block {
+  height: 30rem;
+  font-size: 6px !important;
+  width: 50%;
+  margin: 0.3rem;
+  height: 23rem;
+}
+.right-bar .courses .cols {
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 1rem;
+}
+.right-bar .courses .cols a .div {
+  flex: wi;
+}
+.profilePic {
+  width: 30%;
+  height: 5rem;
+  clip-path: circle();
+}
+.teachers {
+  padding: 1rem;
+  display: flex;
+}
+.teachers .info {
+  align-items: center;
+  justify-content: center;
+}
+.teachers .info h1 {
+  text-transform: capitalize;
+}
+.teachers .info h3 {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+.profilePic img {
+  width: 100%;
+  height: 100%;
+}
+.your-tutors {
+  margin-top: 10rem;
+  text-transform: uppercase;
+}
+.coursePage {
+  margin-top: 2rem;
+}
+.coursePage .tutor .pic {
+  width: 70px;
+  height: 70px;
+}
+.coursePage .tutor .pic img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15%;
+}
+.coursePage .tutor .meta {
+  margin-left: 2rem;
+}
+.coursePage .tutor .meta .name {
+}
+.coursePage .course-meta .about {
+  font-weight: 400;
+}
+.coursePage .course-meta .title {
+  font-weight: 700;
+}
+.coursePage .section-b {
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5.2rem;
+}
+.video-stats {
+  margin-top: -1rem;
+}
+.course-videos {
+  flex-direction: column;
+  width: 100%;
+}
+.course-videos::-webkit-scrollbar {
+  width: 10px;
+}
+.course-videos::-webkit-scrollbar-thumb {
+  width: 10px;
+  background-color: var(--primary-color);
+  border-radius: 30px;
+}
+.course-videos a {
+  align-items: center;
+  margin: 10px 2px;
+  width: 100%;
+}
+.course-videos a .id {
+  background-color: #f53454;
+  width: 50px;
+  height: 50px;
+  border-radius: 14px;
+  padding: 14px 20px;
+  box-sizing: border-box;
+  font-weight: 700;
+  margin-right: 1rem;
+}
+.course-videos a:hover {
+}
+.course-videos a .meta {
+}
+.course-videos a .meta .lbl {
+}
+.course-videos a .meta .duration {
+}
+.course-info {
+  flex: 1;
+}
+.course-preview {
+  flex: 1;
+}
+.course-preview .player {
+}
